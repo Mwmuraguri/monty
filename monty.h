@@ -56,7 +56,7 @@ int main(int argc, char **argv);
 void push(stack_t **stack, unsigned int line_number);
 stack_t *create_node(int value);
 void pall(stack_t **stack, unsigned int line_number);
-void f_pint(stack_t **head, unsigned int counter);
+void pint(stack_t **head, unsigned int counter);
 void pop(stack_t **head, unsigned int counter);
 void swap(stack_t **head, unsigned int counter);
 void add(stack_t **head, unsigned int counter);
