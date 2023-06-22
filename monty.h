@@ -66,7 +66,7 @@ void f_div(stack_t **head, unsigned int counter);
 void rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
 void rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
-void stack(stack_t **head, unsigned int counter);
+void f_stack(stack_t **head, unsigned int counter);
 void queue(stack_t **head, unsigned int counter);
 void addqueue(stack_t **head, int n);
 void execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
