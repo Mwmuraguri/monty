@@ -9,12 +9,12 @@
  *
  * Return: no return value
  */
-void execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", f_pint},
+		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
@@ -22,7 +22,7 @@ void execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"sub", f_sub},
 		{"div", f_div},
 		{"mul", f_mul},
-		{"mod", f_mod},
+		{"mod",f_mod},
 		{"pchar", pchar},
 		{"pstr", pstr},
 		{"rotl", rotl},
@@ -35,14 +35,14 @@ void execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
-		return;
+		return (0);
 	bus.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
 		{
 			opst[i].f(stack, counter);
-			return;
+			return (0);
 		}
 		i++;
 	}
@@ -54,4 +54,5 @@ void execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
+	return (0);
 }

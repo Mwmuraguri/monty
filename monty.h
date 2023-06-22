@@ -66,14 +66,16 @@ void f_div(stack_t **head, unsigned int counter);
 void rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
 void rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
 void f_mul(stack_t **head, unsigned int counter);
-void f_stack(stack_t **head, unsigned int counter);
+void stack(stack_t **head, unsigned int counter);
 void queue(stack_t **head, unsigned int counter);
 void addqueue(stack_t **head, int n);
-void execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void stack(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void pchar(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
 void pstr(stack_t **head, unsigned int counter);
+void addnode(stack_t **head, int n);
 
 /* Other function prototypes */
 void process_file(const char *filename);
